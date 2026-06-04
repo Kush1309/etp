@@ -1,5 +1,5 @@
 FROM maven:latest
-RUN maven -r requirement
+RUN mvn clean compile
 WORKDIR /APP
 COPY . .
 ENTRYPOINT ["java","-jre","target/class/jenkin/App.class"]
